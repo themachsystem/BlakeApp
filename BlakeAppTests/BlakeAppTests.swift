@@ -10,25 +10,62 @@ import XCTest
 @testable import BlakeApp
 
 class BlakeAppTests: XCTestCase {
-
+    var sut: LoginUser!
+    
+    var baseURL: URL!
+    var mockSession: MockURLSession!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        baseURL = URL(string: "https://blake.com.au/api")!
+        mockSession = MockURLSession()
+        sut = LoginUser(baseURL: baseURL, session: mockSession)
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        baseURL = nil
+        mockSession = nil
+        sut = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func test_init_sets_baseURL() {
+        XCTAssertEqual(sut.baseURL, sut.baseURL)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_init_sets_session() {
+        XCTAssertEqual(sut.session, mockSession)
     }
+    
+    func test_login_callsExpectedURL() {
+        // given
+        let loginURL = URL(string: "login", relativeTo: baseURL)
+        
+        // when
+        let mockTask = sut.login(username: "", password: "", completion: {  _, _  in
+            
+        })  as! MockURLSessionDataTask
+        
+        // then
+        XCTAssertEqual(mockTask.url, loginURL)
+    }
+}
 
+class MockURLSession: URLSession {
+    override func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+        return MockURLSessionDataTask(completionHandler: completionHandler, url: url)
+    }
+}
+
+class MockURLSessionDataTask: URLSessionDataTask {
+    var completionHandler: (Data?, URLResponse?, Error?) -> Void
+    var url: URL
+    
+    init(completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void, url: URL) {
+        self.completionHandler = completionHandler
+        self.url = url
+        super.init()
+    }
+    
+    override func resume() {
+        
+    }
 }

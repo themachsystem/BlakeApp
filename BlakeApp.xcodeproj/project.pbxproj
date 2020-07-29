@@ -14,6 +14,8 @@
 		1AE8D1D024D17EAA00447533 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AE8D1CF24D17EAA00447533 /* Assets.xcassets */; };
 		1AE8D1D324D17EAA00447533 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE8D1D124D17EAA00447533 /* LaunchScreen.storyboard */; };
 		1AE8D1DE24D17EAA00447533 /* BlakeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8D1DD24D17EAA00447533 /* BlakeAppTests.swift */; };
+		1AE8D1EA24D17FA100447533 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8D1E924D17FA100447533 /* LoginUser.swift */; };
+		1AE8D1ED24D17FFA00447533 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8D1EC24D17FFA00447533 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		1AE8D1D924D17EAA00447533 /* BlakeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlakeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE8D1DD24D17EAA00447533 /* BlakeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlakeAppTests.swift; sourceTree = "<group>"; };
 		1AE8D1DF24D17EAA00447533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AE8D1E924D17FA100447533 /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
+		1AE8D1EC24D17FFA00447533 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 		1AE8D1C524D17EA600447533 /* BlakeApp */ = {
 			isa = PBXGroup;
 			children = (
+				1AE8D1EB24D17FF100447533 /* Models */,
+				1AE8D1E824D17F7A00447533 /* Networking */,
 				1AE8D1C624D17EA600447533 /* AppDelegate.swift */,
 				1AE8D1C824D17EA600447533 /* SceneDelegate.swift */,
 				1AE8D1CA24D17EA600447533 /* ViewController.swift */,
@@ -97,6 +103,22 @@
 				1AE8D1DF24D17EAA00447533 /* Info.plist */,
 			);
 			path = BlakeAppTests;
+			sourceTree = "<group>";
+		};
+		1AE8D1E824D17F7A00447533 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1AE8D1E924D17FA100447533 /* LoginUser.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1AE8D1EB24D17FF100447533 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1AE8D1EC24D17FFA00447533 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +224,8 @@
 			files = (
 				1AE8D1CB24D17EA600447533 /* ViewController.swift in Sources */,
 				1AE8D1C724D17EA600447533 /* AppDelegate.swift in Sources */,
+				1AE8D1EA24D17FA100447533 /* LoginUser.swift in Sources */,
+				1AE8D1ED24D17FFA00447533 /* User.swift in Sources */,
 				1AE8D1C924D17EA600447533 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +389,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HW9ST7AR42;
 				INFOPLIST_FILE = BlakeApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -383,6 +408,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HW9ST7AR42;
 				INFOPLIST_FILE = BlakeApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
