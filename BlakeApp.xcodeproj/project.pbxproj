@@ -16,6 +16,9 @@
 		1AE8D1DE24D17EAA00447533 /* BlakeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8D1DD24D17EAA00447533 /* BlakeAppTests.swift */; };
 		1AE8D1EA24D17FA100447533 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8D1E924D17FA100447533 /* LoginUser.swift */; };
 		1AE8D1ED24D17FFA00447533 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8D1EC24D17FFA00447533 /* User.swift */; };
+		1AE8D1F124D18A9B00447533 /* LoginParentResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AE8D1EF24D18A8C00447533 /* LoginParentResponse.json */; };
+		1AE8D1F424D18D0700447533 /* Data+JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8D1F324D18D0700447533 /* Data+JSONFile.swift */; };
+		1AE8D1F724D23ABC00447533 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8D1F624D23ABC00447533 /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		1AE8D1DF24D17EAA00447533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AE8D1E924D17FA100447533 /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
 		1AE8D1EC24D17FFA00447533 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1AE8D1EF24D18A8C00447533 /* LoginParentResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LoginParentResponse.json; sourceTree = "<group>"; };
+		1AE8D1F324D18D0700447533 /* Data+JSONFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+JSONFile.swift"; sourceTree = "<group>"; };
+		1AE8D1F624D23ABC00447533 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,8 @@
 		1AE8D1C524D17EA600447533 /* BlakeApp */ = {
 			isa = PBXGroup;
 			children = (
+				1AE8D1F524D23A9500447533 /* ViewModels */,
+				1AE8D1EE24D189F600447533 /* Data */,
 				1AE8D1EB24D17FF100447533 /* Models */,
 				1AE8D1E824D17F7A00447533 /* Networking */,
 				1AE8D1C624D17EA600447533 /* AppDelegate.swift */,
@@ -100,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				1AE8D1DD24D17EAA00447533 /* BlakeAppTests.swift */,
+				1AE8D1F224D18CCB00447533 /* Extensions */,
 				1AE8D1DF24D17EAA00447533 /* Info.plist */,
 			);
 			path = BlakeAppTests;
@@ -119,6 +128,30 @@
 				1AE8D1EC24D17FFA00447533 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1AE8D1EE24D189F600447533 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1AE8D1EF24D18A8C00447533 /* LoginParentResponse.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1AE8D1F224D18CCB00447533 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1AE8D1F324D18D0700447533 /* Data+JSONFile.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1AE8D1F524D23A9500447533 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1AE8D1F624D23ABC00447533 /* UserViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE8D1F124D18A9B00447533 /* LoginParentResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AE8D1CB24D17EA600447533 /* ViewController.swift in Sources */,
+				1AE8D1F724D23ABC00447533 /* UserViewModel.swift in Sources */,
 				1AE8D1C724D17EA600447533 /* AppDelegate.swift in Sources */,
 				1AE8D1EA24D17FA100447533 /* LoginUser.swift in Sources */,
 				1AE8D1ED24D17FFA00447533 /* User.swift in Sources */,
@@ -235,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AE8D1DE24D17EAA00447533 /* BlakeAppTests.swift in Sources */,
+				1AE8D1F424D18D0700447533 /* Data+JSONFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,11 @@
 
 import UIKit
 
-class User: NSObject {
-
+struct User: Decodable, Equatable {
+    let username: String
+    let user_id: String
+    let type: String
+    let auth_token: String
+    let student_ids: [String]?
+    let parent_id: String?
 }

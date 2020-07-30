@@ -1,0 +1,7 @@
+{
+    "username": "example-parent",
+    "user_id": "parent-1",
+    "type": "parent",
+    "auth_token": "qU0QV9ExRU+x7QrgpdYB3Q==",
+    "student_ids": ["student-1", "student-2", "student-3"]
+}
